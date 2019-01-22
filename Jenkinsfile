@@ -1,11 +1,9 @@
-def label = "jenkins-${JOB_NAME}-${BUILD_NUMBER}".replace('/','-').replace(' ','-').replace('%2F','-')
-
 env.CURRENT_ENV = 'stage'
 if (env.BRANCH_NAME == 'release/prod') {
     env.CURRENT_ENV = 'prod'
 }
 
-node(label) {
+pipeline {
     agent any
 
     environment {

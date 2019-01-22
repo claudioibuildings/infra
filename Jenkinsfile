@@ -7,7 +7,7 @@ pipeline {
     agent any
 
     environment {
-        CONTAINER_REGISTRY_BASE = 'registry:5000'
+        CONTAINER_REGISTRY_BASE = '0.0.0.0:5000'
     }
 
     stages {

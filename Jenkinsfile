@@ -21,7 +21,7 @@ pipeline {
 
                 // Checkout app repo.
                 dir('backend') {
-                    git branch: ${BRANCH_NAME}, url: 'git@github.com:claudioibuildings/backend.git'
+                    git branch: ${env.BRANCH_NAME}, url: 'git@github.com:claudioibuildings/backend.git'
                 }
             }
         }

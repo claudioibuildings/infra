@@ -20,8 +20,8 @@ pipeline {
                 checkout scm
 
                 // Checkout app repo.
-                sshagent () {
-                    sh 'GIT_SSH_COMMAND="ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no" git clone -b $BRANCH_NAME git@github.com:claudioibuildings/backend.git backend'
+                dir('backend') {
+                    git branch: $BRANCH_NAME, url: 'git@github.com:claudioibuildings/backend.git'
                 }
             }
         }

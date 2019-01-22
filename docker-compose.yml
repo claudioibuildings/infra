@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+
+  backend:
+    image: ${CONTAINER_REGISTRY_BASE}/nginx
+    build:
+      context: ./backend
+    ports:
+      - "8080:80"
